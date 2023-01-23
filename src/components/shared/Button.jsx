@@ -11,10 +11,10 @@ function Button({
     <button
       className={`px-[20px] py-[10px] font-semibold rounded-full ${
         bigBtn ? 'w-80' : 'w-fit'
-      } hover:opacity-50 bg-${bgColor} ${
+      } hover:opacity-50 ${
         outlineOnly
-          ? `text-${outlineOnlyTextColor} bg-transparent border-2 border-blue-500`
-          : 'text-blue-100'
+          ? `text-${outlineOnlyTextColor} border-2 border-blue-500`
+          : `text-blue-100 bg-${bgColor}`
       }`}
     >
       {children}
@@ -25,7 +25,7 @@ function Button({
 export default Button;
 
 Button.defaultProps = {
-  bgColor: 'blue-500',
+  bgColor: 'zoom-blue',
   outlineOnlyTextColor: 'blue-600',
 };
 
